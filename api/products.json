@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nome": "notebook",
+    "preco": 2499.99,
+    "img": "./api/products/notebook/notebook.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "smartphone",
+    "preco": 1299.99,
+    "img": "./api/products/smartphone/smartphone.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "tablet",
+    "preco": 799.99,
+    "img": "./api/products/tablet/tablet.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "smartwatch",
+    "preco": 2499.99,
+    "img": "./api/products/smartwatch/smartwatch.jpg"
+  }
+]
