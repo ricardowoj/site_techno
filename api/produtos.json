@@ -3,24 +3,48 @@
     "id": 1,
     "nome": "notebook",
     "preco": 2499.99,
-    "img": "./api/products/notebook/notebook.jpg"
+    "img": "./api/produtos/notebook/notebook.jpg"
   },
   {
     "id": 2,
     "nome": "smartphone",
     "preco": 1299.99,
-    "img": "./api/products/smartphone/smartphone.jpg"
+    "img": "./api/produtos/smartphone/smartphone.jpg"
   },
   {
     "id": 3,
     "nome": "tablet",
     "preco": 799.99,
-    "img": "./api/products/tablet/tablet.jpg"
+    "img": "./api/produtos/tablet/tablet.jpg"
   },
   {
     "id": 4,
     "nome": "smartwatch",
     "preco": 2499.99,
-    "img": "./api/products/smartwatch/smartwatch.jpg"
+    "img": "./api/produtos/smartwatch/smartwatch.jpg"
+  },
+  {
+    "id": 1,
+    "nome": "notebook",
+    "preco": 2499.99,
+    "img": "./api/produtos/notebook/notebook.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "smartphone",
+    "preco": 1299.99,
+    "img": "./api/produtos/smartphone/smartphone.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "tablet",
+    "preco": 799.99,
+    "img": "./api/produtos/tablet/tablet.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "smartwatch",
+    "preco": 2499.99,
+    "img": "./api/produtos/smartwatch/smartwatch.jpg"
   }
 ]
