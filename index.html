@@ -10,6 +10,12 @@
 
   <body>
     <div id="app">
+
+      <header class="header">
+        <h1 class="titulo-header">Tecno Maranhão</h1>
+        <div class="carrinho-menu">{{carrinhoTotal}} |</div>
+      </header>
+
       <section class="produtos">
         <div v-for="produto in produtos" :key="produto.id" class="produto">
           <img :src="produto.img" :alt="produto.nome" class="produto-img" />
