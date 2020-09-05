@@ -17,12 +17,19 @@
       </header>
 
       <section class="produtos">
-        <div v-for="produto in produtos" :key="produto.id" class="produto">
-          <img :src="produto.img" :alt="produto.nome" class="produto-img" />
+        <div
+          v-for="item in produtos"
+          @click="fetchProduto(item.nome)"
+          :key="item.nome"
+          class="produto"
+        >
+          <img :src="item.img" :alt="item.nome" class="produto-img" />
           <div class="produto-info">
-            <span class="produto-preco">{{produto.preco | numeroPreco}}</span>
-            <h2 class="produto-nome">{{produto.nome | maiusculo}}</h2>
+            <span class="produto-preco">{{item.preco | numeroPreco}}</span>
+            <h2 class="produto-nome">{{item.nome | maiusculo}}</h2>
           </div>
+          </div>
+      </section>
           
         </div>
       </section>
