@@ -63,8 +63,14 @@ const vm = new Vue({
       this.carrinho.splice(index, 1);
   },
 
-  created() {
-    this.fetchProdutos();
+
+    alerta(mensagem) {
+      this.mensagemAlerta = mensagem;
+      this.acionarAlerta = true;
+      setTimeout(() => {
+        this.acionarAlerta = false;
+      }, 2000);
+    },
   },
 
   filters: {
