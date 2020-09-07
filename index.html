@@ -13,7 +13,15 @@
 
       <header class="header">
         <h1 class="titulo-header">Tecno Maranhão</h1>
-        <div class="carrinho-menu">{{carrinhoTotal}} |</div>
+        <div class="carrinho-menu">
+          {{carrinhoTotal | numeroPreco}} | {{carrinho.length}}
+        </div>
+        <ul class="item">
+          <li v-for="(item, index) in carrinho">
+            <p>{{item.nome}} | {{item.quantidadeComprada}}</p>
+            <button @click="removerItem(index)">x</button>
+          </li>
+        </ul>
       </header>
 
       <section class="produtos">
