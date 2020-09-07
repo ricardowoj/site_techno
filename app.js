@@ -58,6 +58,9 @@ const vm = new Vue({
       this.carrinho.push({ id, nome, preco, quantidadeComprada });
       this.alerta(`${nome} adionado ao carrinho`);
     },
+
+    removerItem(index) {
+      this.carrinho.splice(index, 1);
   },
 
   created() {
