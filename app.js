@@ -8,6 +8,19 @@ const vm = new Vue({
     carrinho: [],
   },
 
+  computed: {
+    carrinhoTotal() {
+      let total = 0;
+      if (this.carrinho.length) {
+        this.carrinho.forEach((item) => {
+          total += item.preco * item.quantidadeComprada;
+          console.log(item);
+        });
+      }
+      return total;
+    },
+  },
+
   methods: {
     fetchProdutos() {
       fetch("./api/produtos.json")
