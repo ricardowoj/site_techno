@@ -43,7 +43,20 @@ const vm = new Vue({
     },
 
     adicionarItem() {
+      const contagemProduto = this.carrinho.find(
+        (item) => item.nome == this.produto.nome
+      );
+      if (contagemProduto) {
+        this.produto.quantidadeComprada++;
+        this.carrinho.splice(this.carrinho.indexOf(this.produto.nome));
+      } else {
+        this.produto.quantidadeComprada = 1;
+      }
+
       this.produto.estoque--;
+      const { id, nome, preco, quantidadeComprada } = this.produto;
+      this.carrinho.push({ id, nome, preco, quantidadeComprada });
+      this.alerta(`${nome} adionado ao carrinho`);
     },
   },
 
