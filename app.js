@@ -4,8 +4,9 @@ const vm = new Vue({
   data: {
     produtos: [],
     produto: false,
-    carrinhoTotal: 0,
     carrinho: [],
+    mensagemAlerta: "Item adicionado",
+    acionarAlerta: false,
   },
 
   computed: {
@@ -61,8 +62,13 @@ const vm = new Vue({
 
     removerItem(index) {
       this.carrinho.splice(index, 1);
-  },
+    },
 
+    checarLocalStorage() {
+      if (window.localStorage.carrinho) {
+        this.carrinho = JSON.parse(window.localStorage.carrinho);
+      }
+    },
 
     alerta(mensagem) {
       this.mensagemAlerta = mensagem;
@@ -83,5 +89,16 @@ const vm = new Vue({
     maiusculo(valor) {
       return valor.toUpperCase();
     },
+  },
+
+  watch: {
+    carrinho() {
+      window.localStorage.carrinho = JSON.stringify(this.carrinho);
+    },
+  },
+
+  created() {
+    this.fetchProdutos();
+    this.checarLocalStorage();
   },
 });
